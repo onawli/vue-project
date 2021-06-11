@@ -4,7 +4,7 @@
     <router-link
       v-for="(item, index) in bars"
       :key="index"
-      :to="{ name: item.id }"
+      :to="{ path: item.path }"
       :class="item.id"
       active-class="z-act"
       tag="li">
@@ -22,15 +22,18 @@ export default {
     return {
       bars: [
         {
-          id: 'films',
+          id: 'nowPlaying',
+          path: '/films',
           name: '电影'
         },
         {
           id: 'cinemas',
+          path: '/cinemas',
           name: '影院'
         },
         {
           id: 'center',
+          path: '/center',
           name: '我的'
         }
       ]
@@ -39,7 +42,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../styles/common/px2rem.scss';
 
 .nav-bar {
@@ -66,7 +69,7 @@ export default {
       background-size: 100%;
     }
     // 如果
-    &.films {
+    &.nowPlaying {
       .img {
         background-image: url('./images/films.png');
       }

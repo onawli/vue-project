@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <NavBar></NavBar>
+    <!-- <NavBar></NavBar> -->
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar/index';
+// import NavBar from './components/NavBar/index';
 
 export default {
   // 选项对象
-  name: 'App',
+  name: 'App'
 
-  components: {
-    NavBar
-  }
+  // components: {
+  //   NavBar
+  // }
 }
 </script>
 
