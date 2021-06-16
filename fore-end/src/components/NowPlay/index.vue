@@ -40,7 +40,7 @@ export default {
   name: 'NowPlay',
   methods: {
     getFilms () {
-      axios.get('../../../static/api/homepage.json')
+      axios.get('../static/api/homepage.json')
         .then((response) => {
           let result = response.data;
           console.log(result);
